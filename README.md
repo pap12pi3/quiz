@@ -1,1 +1,1 @@
-# https://pap12pi3.github.io/quiz/.
+# https://pap12pi3.github.io/quiz/
