@@ -37,14 +37,26 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 </nav>
 
 <!-- Navbar em telas pequenas (escondido em telas médias e grandes) -->
+<div class="w3-container">
 	<div class="w3-dropdown-click">
     <button onclick="myFunction()" class="w3-button w3-black">Click Me!</button>
     <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
-    <a href="index.html" class="w3-bar-item w3-button" style="width:33% !important">ÍNICIO</a>
-    <a href="Como jogar.html" class="w3-bar-item w3-button" style="width:33% !important">COMO JOGAR</a>
-    <a href="Download.html" class="w3-bar-item w3-button" style="width:33% !important">DOWNLOAD</a>
+    <a href="index.html" class="w3-bar-item w3-button" >ÍNICIO</a>
+    <a href="Como jogar.html" class="w3-bar-item w3-button">COMO JOGAR</a>
+    <a href="Download.html" class="w3-bar-item w3-button">DOWNLOAD</a>
   </div>
 </div>
+</div>
+<script>
+function myFunction() {
+    var x = document.getElementById("Demo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
 
 <!-- Page Content -->
 <div class="w3-padding-large" id="main">
@@ -61,5 +73,5 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
    
 </div>
 
-  </body>
+</body>
 </html>
