@@ -3,6 +3,7 @@
 <title>Quiz</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -37,26 +38,32 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 </nav>
 
 <!-- Navbar em telas pequenas (escondido em telas médias e grandes) -->
-<div class="w3-container">
-	<div class="w3-dropdown-click">
-    <button onclick="myFunction()" class="w3-button w3-black">Click Me!</button>
-    <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
-    <a href="index.html" class="w3-bar-item w3-button" >ÍNICIO</a>
-    <a href="Como jogar.html" class="w3-bar-item w3-button">COMO JOGAR</a>
-    <a href="Download.html" class="w3-bar-item w3-button">DOWNLOAD</a>
-  </div>
-</div>
-</div>
-<script>
-function myFunction() {
-    var x = document.getElementById("Demo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else { 
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
+<div data-role="page" id="pageone">
+  <div data-role="panel" id="myPanel"> 
+    <h2>Panel Header</h2>
+   <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>ÍNICIO</p>
+  </a>
+   <a href="Como jogar.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>COMO JOGAR</p>
+  </a>
+  <a href="Download.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>DOWNLOAD</p>
+  </a>
+  </div> 
+
+  <div data-role="header"><div data-role="main" class="ui-content">
+  <a href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Open Panel</a>
+    <h1>Page Header</h1>
+  </div></div>
+
+  <div data-role="footer">
+    <h1>Page Footer</h1>
+  </div> 
+</div> 
 
 <!-- Page Content -->
 <div class="w3-padding-large" id="main">
